@@ -1,0 +1,9 @@
+
+@include "/opt/bro/lib/bawk/getlogheaders.awk"
+
+# gawk include can't include string variables, so literal paths have to be used.
+# If you have a library to include, the path to it must be specified below.
+@include "/opt/bro/lib/bawk/geoiplookup.awk"
+#@include "/opt/bro/lib/bawk/test.awk"
+@include "/opt/bro/lib/bawk/address-type.awk"
+

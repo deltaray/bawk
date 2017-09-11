@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Pretty simple, all the heavy lifting happens in the load script
+# and the included library files in /opt/bro/lib/bawk
+
+gawk -f /opt/bro/lib/bawk/load -e "$@"
+
+
+
+
+
