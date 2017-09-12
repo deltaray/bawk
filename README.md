@@ -35,8 +35,8 @@ follow these directions.
 
 * Download this repo to the host where your Bro logs are located.
 * Copy the _bin/bawk_ script to _/opt/bro/bin_ or to somewhere in your path
-* Copy the _lib_ directory and its contents to _/opt/bro/lib/bawk_
-
+* Copy the _lib_ directory and its contents to _/opt/bro/lib/bawk_ or some accessible library directory
+* If you've changed the library directory from _/opt/bro/lib/bawk_ to something else, then adjust the directory paths in the _lib/load_ file to match the new path.
 
 
 # Usage
