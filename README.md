@@ -14,7 +14,7 @@ default Bro format logs.
 
 # License
 
-Copyright 2017 Mark Krenz <mkrenz@iu.edu>
+Copyright 2017 Mark Krenz (mkrenz@iu.edu)
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
@@ -50,7 +50,7 @@ For instance, to access the *id.orig_h* field, just use *$_b["id.orig_h"]*
 Here is an example of running bawk against an ssh.log file to print lines
 where the origin IP is 10.0.5.7 and the authentication was successful:
 
-`bawk '$_b["id.orig\_h"]=="10.0.5.7" && $_b["auth_success"]=="T"' ssh.log`
+`bawk '$_b["id.orig_h"]=="10.0.5.7" && $_b["auth_success"]=="T"' ssh.log`
 
 
 # Available variables
