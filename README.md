@@ -30,9 +30,13 @@ along with this program.  If not, see <[http://www.gnu.org/licenses/](http://www
 
 # Setup
 
-+Download this repo to the host where your Bro logs are located.
-+Copy the _bin/bawk_ script to _/opt/bro/bin_ or to somewhere in your path
-+Copy the _lib_ directory and its contents to _/opt/bro/lib/bawk_
+I'm looking into making this available through bro-pkg, but for now, just
+follow these directions.
+
+* Download this repo to the host where your Bro logs are located.
+* Copy the _bin/bawk_ script to _/opt/bro/bin_ or to somewhere in your path
+* Copy the _lib_ directory and its contents to _/opt/bro/lib/bawk_
+
 
 
 # Usage
@@ -41,12 +45,12 @@ The bawk script handles the format of the bro logs on your behalf. You don't
 need to specify the field separator and you can reference the fields in a
 Bro formatted log by their name.
 
-For instance, to access the *id.orig\_h* field, just use *$\_b["id.orig\_h"]*
+For instance, to access the *id.orig_h* field, just use *$_b["id.orig_h"]*
 
 Here is an example of running bawk against an ssh.log file to print lines
 where the origin IP is 10.0.5.7 and the authentication was successful:
 
-`bawk '$\_b["id.orig\_h"]=="10.0.5.7" && $\_b["auth_success"]=="T"' ssh.log`
+`bawk '$_b["id.orig\_h"]=="10.0.5.7" && $_b["auth_success"]=="T"' ssh.log`
 
 
 # Available variables
@@ -54,14 +58,14 @@ where the origin IP is 10.0.5.7 and the authentication was successful:
 In addition to the \_b[] array containing the names of each field.
 There are variables set as defined at the top of the log file.
 
-+\_b[] field array
-+\_log\_separator
-+\_log\_set\_separator
-+\_log\_empty\_field
-+\_log\_unset\_field
-+\_log\_path
-+\_log\_open\_time
-+\_log\_close\_time
+* \_b[] field array
+* \_log\_separator
+* \_log\_set\_separator
+* \_log\_empty\_field
+* \_log\_unset\_field
+* \_log\_path
+* \_log\_open\_time
+* \_log\_close\_time
 
 # Available functions
 
