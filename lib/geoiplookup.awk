@@ -34,7 +34,7 @@ BEGIN {
 function geoip(_ip_) {
  _addrtype_ = addrtype(_ip_)
  if (_addrtype_ == "") { # Check that this is a valid IP address first
-    print "FATAL: Attempt to geoip lookup on non-IP address on line " NR " of file " FILENAME    
+    print "FATAL: Attempt to geoip lookup on non-IP address on line " FNR " of file " FILENAME    
     _noending_=1
     exit(2)
  }
