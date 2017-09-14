@@ -88,3 +88,16 @@ Determines if the IP is an IPv4 IP or IPv6 IP address. It returns the string v4
 or v6 depending on the type. If it can't determine the type it returns an empty
 string.
 
+## classC, classB, classA
+
+Usage: *classC(ipv4address)*
+
+These functions are useful for getting the old class style networks. The
+functions return either the first 3 (classC), first 2 (classB) or first (classA)
+parts of the IPv4 dotted quad.
+
+Example: classC(192.0.2.150) --> 192.0.2
+
+It can be useful to consolidate several IPs from the same class network into one.
+
+
