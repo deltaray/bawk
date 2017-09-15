@@ -100,4 +100,13 @@ Example: classC(192.0.2.150) --> 192.0.2
 
 It can be useful to consolidate several IPs from the same class network into one.
 
+## addr_in_cidr
+
+Usage: *addr_in_cidr(ipv4address, cidr_netblock)*
+
+This function will return true if the given IPv4 address is in the given CIDR
+formatted netblock. You can use any CIDR netmask from /0 to /32.
+
+Example: addr_in_cidr($_b["id.resp_h"], "192.168.0.0/24")
+
 

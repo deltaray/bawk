@@ -20,4 +20,5 @@
 #@include "/opt/bro/lib/bawk/test.awk"
 @include "/opt/bro/lib/bawk/address-type.awk"
 @include "/opt/bro/lib/bawk/truncate-to-class.awk"
+@include "/opt/bro/lib/bawk/ipv4-cidr.awk"
 
